@@ -1,0 +1,147 @@
+:root {
+    --bg-main: #0a0a0a;
+    --bg-card: #121212;
+    --border-color: #262626;
+    --border-hover: #404040;
+    --text-pure: #ffffff;
+    --text-muted: #a3a3a3;
+    --text-dark: #737373;
+}
+
+body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background-color: var(--bg-main);
+    color: var(--text-pure);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Smooth top-to-bottom background gradient */
+.bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, #171717 0%, var(--bg-main) 100%);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+header {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 680px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    margin: 0 0 10px 0;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 680px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.project-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    background-color: #1f1f1f;
+    border: 1px solid var(--border-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--text-muted);
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+}
+
+.image-wrapper {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #000;
+    /* Clean gradient glow underneath the image container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: auto;
+    filter: grayscale(20%); /* Blends colorful screenshots beautifully into monochrome */
+    transition: filter 0.3s ease;
+}
+
+.project-card:hover img {
+    filter: grayscale(0%);
+}
+
+footer {
+    padding: 40px 20px;
+    color: var(--text-dark);
+    font-size: 0.85rem;
+    text-align: center;
+    width: 100%;
+}
