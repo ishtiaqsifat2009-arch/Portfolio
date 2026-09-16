@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishtiaq Sifat | Systems Developer & Programmer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>Ishtiaq Sifat<span class="logo-bracket"> /&gt;</span>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#engine">Chess Engine</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>  
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="terminal-pill">
+                    <span class="pulse-dot"></span> systems_developer ~ x86_64-linux
+                </div>
+                <h1 data-value="Hello World.">Hello World.</h1>
+                <h2>Systems Developer &amp; Programmer</h2>
+                <p class="hero-subtitle">Engineering high-throughput engines, low-level system architectures, and terminal-driven workflows.</p>
+                <div class="hero-cta-group">
+                    <a href="#engine" class="btn btn-primary">Explore Chess Engine</a>
+                    <a href="#projects" class="btn btn-secondary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section hidden-on-scroll">
+            <div class="section-header">
+                <span class="section-badge">// PROFILE</span>
+                <h2>About Me</h2>
+                <div class="divider"></div>
+            </div>
+            <p class="lead-text">
+                I am a student programmer with a deep focus on system-level architecture, competitive problem-solving, and back-end logic. I thrive in minimalist, terminal-based Linux environments where I can optimize both my code and execution speed down to the CPU instruction. Whether I'm implementing branchless bitboard algorithms in C++ or structuring an asynchronous API, I build software that is clean, scalable, and obsessively performant.
+            </p>
+        </section>
+
+        <!-- Dedicated Chess Engine Showcase Section -->
+        <section id="engine" class="content-section engine-section hidden-on-scroll">
+            <div class="section-header">
+                <span class="section-badge">// FLAGSHIP ARCHITECTURE</span>
+                <h2>High-Throughput C++ Chess Engine</h2>
+                <div class="divider"></div>
+                <p class="section-lead">A high-performance bitboard engine featuring an optimized alpha-beta search pipeline, sophisticated pruning heuristics, and zero-branching sliding piece move generation.</p>
+            </div>
+
+            <div class="engine-showcase-grid">
+                <!-- Visual & Hardware Specs Column -->
+                <div class="engine-preview-card">
+                    <div class="preview-frame">
+                        <div class="frame-bar">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="frame-title">uci_engine_bench :: x86_64</span>
+                        </div>
+                        <div class="preview-image-wrapper">
+                            <img src="images/chess-engine.webp" alt="High-Performance C++ Chess Engine Preview" class="engine-asset">
+                            <div class="overlay-telemetry">
+                                <span class="telemetry-badge"><span class="highlight-cyan">NPS</span> ~12.4M/s</span>
+                                <span class="telemetry-badge"><span class="highlight-amber">PROTOCOL</span> UCI 2.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specs-panel">
+                        <div class="spec-row">
+                            <span class="spec-label">Core Language</span>
+                            <span class="spec-value">C++20 (GCC 14 / Clang 18)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Board Model</span>
+                            <span class="spec-value">64-bit Bitboards (<span class="mono">uint64_t</span>)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Sliding Attacks</span>
+                            <span class="spec-value">Magic Bitboards + PEXT (BMI2)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Search Algorithm</span>
+                            <span class="spec-value">PVS Alpha-Beta Minimax</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Throughput</span>
+                            <span class="spec-value highlight-green">10,000,000+ Nodes/Sec</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deep-Dive Features Column -->
+                <div class="engine-details">
+                    <!-- Feature Pillar 1: Search Engine -->
+                    <div class="feature-block">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-body">
+                            <h3>High-Throughput Alpha-Beta Search Engine</h3>
+                            <p>Engineered around a Negamax framework with Principal Variation Search (PVS). Aggressively prunes subtrees while maintaining tactical soundness across deep combinatorial branches.</p>
+                            <ul class="feature-bullets">
+                                <li><strong>Quiescence Search:</strong> Evaluates captures and checks with a stand-pat cutoff to eliminate the horizon effect in volatile tactical lines.</li>
+                                <li><strong>Transposition Table (TT):</strong> Dual-tier depth-preferred cache with 64-bit Zobrist hashing to instantly retrieve previously calculated positions.</li>
+                                <li><strong>Pruning Heuristics:</strong> Late Move Reductions (LMR), Null Move Pruning (NMP), and Reverse Futility Pruning for maximum search depth per clock cycle.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Feature Pillar 2: Move Ordering -->
+                    <div class="feature-block">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-body">
+                            <h3>Dynamic Move Ordering Pipeline</h3>
+                            <p>Alpha-Beta efficiency fundamentally hinges on move ordering. The search engine sorts candidate moves to maximize beta cutoffs on the very first branch explored:</p>
+                            <div class="order-pipeline">
+                                <span class="step-pill">1. TT Hash Move</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="step-pill">2. MVV-LVA Captures</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="step-pill">3. Killer Moves</span>
+                                <span class="pipeline-arrow">→</span>
+                                <span class="step-pill">4. History Counter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature Pillar 3: Bitboards & MoveGen -->
+                    <div class="feature-block">
+                        <div class="feature-icon">♟️</div>
+                        <div class="feature-body">
+                            <h3>Branchless Bitboard Architecture</h3>
+                            <p>Entire 64-square chessboard states are represented by 64-bit words. Sliding piece attack rays (Bishops and Rooks) use pre-calculated Magic Bitboards with BMI2 intrinsics (<span class="mono">_pext_u64</span>), turning complex line-of-sight checks into constant-time table lookups.</p>
+                            <div class="code-chip-row">
+                                <span class="code-chip">AVX2 Popcount</span>
+                                <span class="code-chip">Magic Numbers</span>
+                                <span class="code-chip">Incremental Zobrist</span>
+                                <span class="code-chip">Branchless Raycasts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Search Engine Terminal Simulator -->
+            <div class="engine-terminal-container">
+                <div class="terminal-bar">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">chess_engine_cli --bench-search --uci</div>
+                    <div class="terminal-badge">LIVE SIMULATOR</div>
+                </div>
+                
+                <div class="terminal-body">
+                    <div class="terminal-controls">
+                        <div class="control-group">
+                            <label for="fen-select">Test Position:</label>
+                            <select id="fen-select" class="terminal-select">
+                                <option value="startpos">Initial Setup (Standard Startpos)</option>
+                                <option value="kiwipete">Kiwipete (High-Branching Tactical Trap)</option>
+                                <option value="endgame">Endgame Grind (Pawn Promotion &amp; Zugzwang)</option>
+                            </select>
+                        </div>
+                        <div class="terminal-action-buttons">
+                            <button id="run-bench-btn" class="btn btn-terminal">Run Search Engine</button>
+                            <button id="clear-bench-btn" class="btn btn-terminal-secondary">Reset</button>
+                        </div>
+                    </div>
+
+                    <!-- Telemetry Stats Bar -->
+                    <div class="telemetry-bar">
+                        <div class="telemetry-stat">
+                            <span class="stat-label">DEPTH</span>
+                            <span id="stat-depth" class="stat-val">0 / 8</span>
+                        </div>
+                        <div class="telemetry-stat">
+                            <span class="stat-label">NODES EVALUATED</span>
+                            <span id="stat-nodes" class="stat-val">0</span>
+                        </div>
+                        <div class="telemetry-stat">
+                            <span class="stat-label">THROUGHPUT</span>
+                            <span id="stat-nps" class="stat-val">0 NPS</span>
+                        </div>
+                        <div class="telemetry-stat">
+                            <span class="stat-label">TT CACHE HIT</span>
+                            <span id="stat-tt" class="stat-val">0.0%</span>
+                        </div>
+                        <div class="telemetry-stat">
+                            <span class="stat-label">BEST MOVE</span>
+                            <span id="stat-bestmove" class="stat-val highlight-amber">--</span>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Output Window -->
+                    <div id="terminal-output" class="terminal-output" aria-live="polite">
+                        <p class="term-line prompt-line">$ ./chess_engine --uci</p>
+                        <p class="term-line success-line">id name SifatEngine v2.4 (C++20, x86_64, BMI2)</p>
+                        <p class="term-line info-line">Bitboards initialized: 64 squares mapped, Magic tables computed (64KB hash).</p>
+                        <p class="term-line comment-line">Select a position above and click "Run Search Engine" to simulate the alpha-beta search pipeline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Arsenal / Skills Section -->
+        <section id="skills" class="content-section hidden-on-scroll">
+            <div class="section-header">
+                <span class="section-badge">// STACK</span>
+                <h2>Technical Arsenal</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="cat-icon">&lt;/&gt;</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="tags-container">
+                        <span class="skill-tag">C++ (C++20)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">x86_64 Assembly</span>
+                        <span class="skill-tag">HTML5 / CSS3</span>
+                        <span class="skill-tag">Modern JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="cat-icon">⚡</span>
+                        <h3>Systems &amp; Architecture</h3>
+                    </div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Bitboards &amp; SIMD</span>
+                        <span class="skill-tag">Minimax &amp; Alpha-Beta</span>
+                        <span class="skill-tag">Transposition Tables</span>
+                        <span class="skill-tag">Zobrist Hashing</span>
+                        <span class="skill-tag">Linux Systems (Fedora)</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="cat-icon">🛠️</span>
+                        <h3>Tools &amp; Environments</h3>
+                    </div>
+                    <div class="tags-container">
+                        <span class="skill-tag">Neovim (Custom Lua)</span>
+                        <span class="skill-tag">Git / GitHub CLI</span>
+                        <span class="skill-tag">GDB / Valgrind</span>
+                        <span class="skill-tag">Bash / Zsh</span>
+                        <span class="skill-tag">FastAPI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="content-section hidden-on-scroll">
+            <div class="section-header">
+                <span class="section-badge">// FOCUS</span>
+                <h2>Beyond the Terminal</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">🧠</div>
+                    <h3>Competitive Programming</h3>
+                    <p>Continuously refining algorithmic precision, cache-friendly data structures, and problem-solving speed under time constraints for the CCC.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🎮</div>
+                    <h3>Action RPGs</h3>
+                    <p>Appreciating stylized user interfaces, tight game loops, and soundtrack direction in masterclasses like Persona 5.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🏀</div>
+                    <h3>Basketball</h3>
+                    <p>Committed to early morning runs. Court discipline, spatial awareness, and endurance directly carry over to marathon debugging sessions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="content-section hidden-on-scroll">
+            <div class="section-header">
+                <span class="section-badge">// PORTFOLIO</span>
+                <h2>Featured Projects</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="cpp">C++ Systems</button>
+                <button class="filter-btn" data-filter="engine">Chess Engines</button>
+                <button class="filter-btn" data-filter="gamedev">Game Dev</button>
+            </div>
+            
+            <div class="project-grid">
+                <!-- Project 1: High-Performance Chess Engine -->
+                <div class="project-card" data-category="engine">
+                    <div class="project-image">
+                        <img src="images/chess-engine.webp" alt="High-Performance C++ Chess Engine Preview">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>C++20 Chess Engine</h3>
+                            <span class="tag tag-engine">Bitboards</span>
+                        </div>
+                        <p class="project-description">A high-throughput chess engine engineered with Magic Bitboards, dynamic move ordering (MVV-LVA, Killer, History), and a multi-million NPS alpha-beta search pipeline.</p>
+                        <div class="project-links">
+                            <a href="#engine" class="project-link">Interactive Deep-Dive →</a>
+                            <a href="https://github.com/ishtiaqsifat2009-arch" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Aegis Workspace (Photo 1 preserved) -->
+                <div class="project-card" data-category="cpp">
+                    <div class="project-image">
+                        <img src="images/screenshot.png" alt="Aegis Workspace Terminal Preview">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Aegis Workspace</h3>
+                            <span class="tag tag-cpp">C++ Systems</span>
+                        </div>
+                        <p class="project-description">A sophisticated terminal-based productivity dashboard architected from the ground up, featuring modular study queues and real-time system logging.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/ishtiaqsifat2009-arch/Aegis-Project" target="_blank" class="project-link">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: SFU Canadian Coding League (Photo 2 preserved) -->
+                <div class="project-card" data-category="gamedev">
+                    <div class="project-image">
+                        <img src="images/sfu-placeholderimg.png" alt="SFU Coding League Placeholder">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>SFU Canadian Coding League</h3>
+                            <span class="tag tag-game">Game Dev</span>
+                        </div>
+                        <p class="project-description">Collaborated with a team of three to architect and deploy a game for a national competition. Spearheaded core game logic and system integration under tight deadlines.</p>
+                        <div class="project-links">
+                            <a href="https://pixelpad.io/app/rapclzvumnh/" target="_blank" class="project-link">Play / View Game</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section contact-section hidden-on-scroll">
+            <div class="section-header">
+                <span class="section-badge">// COMMUNICATIONS</span>
+                <h2>Let's Connect.</h2>
+                <div class="divider"></div>
+            </div>
+            <p class="contact-lead">Always open to discussing systems programming, low-level optimization, or competitive algorithmic challenges.</p>
+            <div class="contact-links">
+                <a href="mailto:ishtiaq.sifat2009@gmail.com" class="contact-item">
+                    <span class="contact-type">EMAIL</span>
+                    <span class="contact-val">ishtiaq.sifat2009@gmail.com</span>
+                </a>
+                <a href="https://github.com/ishtiaqsifat2009-arch" target="_blank" class="contact-item">
+                    <span class="contact-type">GITHUB</span>
+                    <span class="contact-val">@ishtiaqsifat2009-arch</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ishtiaq-sifat-9b7634361/" target="_blank" class="contact-item">
+                    <span class="contact-type">LINKEDIN</span>
+                    <span class="contact-val">Ishtiaq Sifat</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Ishtiaq Sifat &bull; Built with semantic HTML5, CSS3, &amp; Tokyo Night theme.</p>
+            <p class="footer-sub">Engineered for low latency &amp; zero fluff.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
