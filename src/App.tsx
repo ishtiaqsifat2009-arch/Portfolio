@@ -23,17 +23,17 @@ const otherInputs = [
   {
     number: "01",
     title: "Competitive programming",
-    text: "I like the point in a CCC problem where one observation makes the whole thing simpler. I’m still practicing, and trying to get faster without skipping the reasoning.",
+    text: "I like the point in a CCC problem where one observation makes the whole thing simpler. I am still developing my DSA skills.",
   },
   {
     number: "02",
-    title: "Games",
-    text: "I play a lot of action RPGs. I end up noticing the combat feel, menus, and pacing almost as much as the story.",
+    title: "Video Games",
+    text: "I play a lot of action RPGs and fantasy games. I like challenging combat, exploration, and a good story.",
   },
   {
     number: "03",
     title: "Basketball",
-    text: "Basketball gets me away from the screen for a while. I play to stay active, reset my head, and have fun with friends.",
+    text: "Basketball gets me away from the screen for a while. I play to stay active and have fun with friends.",
   },
 ];
 
