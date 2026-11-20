@@ -41,12 +41,12 @@ const projects = [
   {
     number: "03",
     category: "gamedev" as const,
-    type: "SFU CANADIAN CODING LEAGUE / PIXELPAD",
-    title: "Team game project",
+    type: "SFU NATIONAL CANADIAN CODING LEAGUE / PIXELPAD",
+    title: "NightLight",
     description:
-      "A team project for the SFU Canadian Coding League. I worked on core game logic and helped get the pieces integrated in PixelPad.",
+      "A team project for the SFU National Canadian Coding League. I worked on core game logic and helped get the pieces integrated in PixelPad.",
     image: "SFUCL.jpg",
-    imageAlt: "SFU Canadian Coding League logo",
+    imageAlt: "SFU National Canadian Coding League logo",
     tags: ["Game dev", "Team project", "PixelPad"],
     href: "https://pixelpad.io/app/rapclzvumnh/",
     linkLabel: "View on PixelPad",
